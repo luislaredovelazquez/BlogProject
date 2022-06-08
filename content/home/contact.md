@@ -1,3 +1,4 @@
+active:false
 ---
 # An instance of the Contact widget.
 widget: contact
