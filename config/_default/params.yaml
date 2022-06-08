@@ -6,7 +6,6 @@
 # Appearance
 
 appearance:
-  theme: 1950s
   theme_day: minimal
   theme_night: minimal
   font: minimal
@@ -19,8 +18,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'Luis Laredo Personal Blog.'
+    twitter: 'luislaredov'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
