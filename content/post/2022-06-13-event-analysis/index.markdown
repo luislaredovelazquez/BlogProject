@@ -26,9 +26,7 @@ projects: []
 
 
 
-<iframe width='100%' height='330px' src='result.html' >
-  <p>Your browser does not support iframes</p>
-</iframe>
+
 
 
 
