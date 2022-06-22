@@ -1,5 +1,5 @@
 $('document').ready(function(){
-    var width = 1400;
+    var width = 1000;
     var height = 800;
   
     var svg = d3.select("#map")
@@ -9,7 +9,7 @@ $('document').ready(function(){
   
     var projection = d3.geo.mercator()
       .center([0,40])
-      .scale(260)
+      .scale(160)
       .rotate([0, 0, 0])
       .translate([width / 2, height / 2]);
   

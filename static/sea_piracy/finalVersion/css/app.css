@@ -2,3 +2,29 @@
     margin: 0;
     padding: 0;
   }
+
+  .container{max-width: 960px; margin: auto;}
+
+  .box{
+    display:flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    align-content: center
+  }
+
+.video_container{
+  position:relative;
+  overflow: hidden;
+  height: 480px;
+  width: 480px;
+}
+
+.videoFrame{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 480px;
+  width: 960px;
+}

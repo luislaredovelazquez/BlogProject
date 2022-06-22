@@ -96,28 +96,36 @@ function App() {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-        const urls = []; 
+        let urls = []; 
+        let webcam_url = "";
         items.forEach(item => {
-            urls.push(item.url);
-        });   
+            urls.push(String(item.url));
+        });           
+        webcam_url = urls[2];
+        if (typeof webcam_url !== 'undefined')
+        {
+         webcam_url = webcam_url.replace('http','https');
+        }
+        // https://jsfiddle.net/e5bxpuzf/2/
       return (
         <div>
             <Navbar></Navbar>
-            <iframe src="map.html" height="800" width="1500" title="Maritime Attacks Map"></iframe>
-            <iframe
-                id="trends-widget"
-                src="https://trends.google.com:443/trends/embed/explore/TIMESERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Maritime+piracy%22%2C%22geo%22%3A%22US%22%2C%22time%22%3A%22today%2012-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D&amp;tz=-480&amp;"
-                width="100%"
-                height="500px"
-                frameBorder="0"
-                scrolling="0"
-            /> 
+          <iframe src="map.html" height="800" width="1000" title="Maritime Attacks Map" frameBorder="0"></iframe>
+          <iframe src="result.html" height="400" width="1000" title="Country indicators" frameBorder="0"></iframe>
          <Typography sx={{ mb: 1.5 }} color="text.secondary">
           Live webcam
         </Typography>      
-        <iframe src={urls[2]} height="200" width="300" title="Webcam"></iframe>
+        
+        <div className="box">
+        <iframe src="heatmap.html" height="480" width="480" title="Heatmap" frameBorder="0"></iframe>
+        
+        <div className="video_container">
+        <iframe className="videoFrame" src={webcam_url} height="100%" width="100%" title="Webcam" frameBorder="0"></iframe>
+        </div>
+        </div>
+
+        <iframe src="result2.html" height="900" width="1000" title="Country indicators" frameBorder="0"></iframe>
         <DashboardCard></DashboardCard>
-        <iframe src="ships.html" height="400" width="1500" title="Ships tracker"></iframe>
         <Floating></Floating>
         </div>
       );
