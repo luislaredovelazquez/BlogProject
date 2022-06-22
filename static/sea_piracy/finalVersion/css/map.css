@@ -3,9 +3,9 @@ body {
    }
    
    path {
-     fill: rgb(60,90,80);
+     fill: #ccced3;
      stroke-width: .3px;
-     stroke: lightblue;
+     stroke: #525358;
    }
    
    div.tooltip {
@@ -25,13 +25,20 @@ body {
    
    .timeline {
      position: absolute;
-     top: 10%;
-     left: 42%;
+     top: 50%;
+     left: 50%;
      box-shadow: 3px 3px 9px rgba(0,0,0,0.5);
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 16px;
    }
   
+   .timeline_btn{
+    opacity:1;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+   }
 
    .legendYear {
      position: absolute;
@@ -59,8 +66,7 @@ body {
    .aty {
     position: absolute;
     bottom: 10%;
-    left: 15%;
-    box-shadow: 3px 3px 9px rgba(0,0,0,0.5);
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
+    left: 10%;
+    font-family: 'Sail', cursive;
+    font-size: 56px;
   }

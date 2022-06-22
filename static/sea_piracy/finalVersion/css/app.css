@@ -28,3 +28,11 @@
   height: 480px;
   width: 960px;
 }
+
+.nautic{
+  font-family: 'Sail', cursive;
+}
+
+.appbar{
+   background-color: aliceblue;
+}

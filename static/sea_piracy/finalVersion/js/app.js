@@ -12,24 +12,29 @@ const {
     CardContent,
 } = MaterialUI;
 
+
+
 const Floating = () => {
-return(<Fab aria-label="like" color='primary' onClick={toggleFrame} tooltip="Hide trends frame" style={{position: 'absolute', bottom: 10, right: 10,}}>
+return(<Fab aria-label="like" onClick={toggleFrame} tooltip="Hide trends frame" style={{background: '#2E3B55', color:'white', position: 'absolute', bottom: 10, right: 10,}}>
   +
 </Fab>);
 };
 
 function toggleFrame(){
-if(document.getElementById('def_card').style.opacity == 1){
-document.getElementById('def_card').style.opacity = 0;}
-else{
-document.getElementById('def_card').style.opacity = 1;}
+  window.scrollTo({
+    top: 850,
+    behavior: 'smooth',
+  });
 }
 
 const Navbar = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ background: '#2E3B55' }}>
       <Toolbar>
-      <Button color="inherit">Maritime Trends</Button>
+      <Typography style={{fontFamily: 'Sail, cursive', fontSize: '24px'}} component="div" sx={{ flexGrow: 1 }}>
+            Crime at the Sea
+      </Typography>
+      <Button id="home_btn" onClick={homeRedirect}  color="inherit"><Typography style={{fontFamily: 'Sail, cursive', fontSize: '24px', textTransform: 'none' }}>Home</Typography></Button>
       </Toolbar>
     </AppBar>
   );
@@ -37,7 +42,7 @@ const Navbar = () => {
 
 const DashboardCard = () => {
 return(
-<Card id="def_card" sx={{ minWidth: 275 }}  style={{opacity:0}}>
+<Card id="def_card" sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day
@@ -64,6 +69,10 @@ return(
 function handleRedirect(){
 return window.location.href = 'https://en.wikipedia.org/wiki/Ship';
 }
+
+function homeRedirect(){
+  return window.location.href = 'https://luislaredo.netlify.app/';
+  }
 
 function App() {
     const [error, setError] = React.useState(null);

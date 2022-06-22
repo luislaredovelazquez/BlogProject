@@ -107,9 +107,9 @@ $('document').ready(function(){
               return projection([d.longitude, d.latitude])[1];
             })
             .attr("r", 5)
-            .style("fill", "red")
+            .style("fill", "black")
             .style("stroke-width", ".2px")
-            .style("stroke", "steelblue")
+            .style("stroke", "black")
             .style("opacity", 0)
             .on("mouseover", function(d) {
               tooltip.transition()
@@ -156,7 +156,8 @@ $('document').ready(function(){
                 .attr("cy", function(d){
                    return projection([d.longitude, d.latitude])[1];
                   })
-                .style("fill", "blue");  
+                .style("fill", "#c29333")
+                .style("stroke", "#c29333");    
                 
                 }
 
@@ -174,7 +175,7 @@ $('document').ready(function(){
             } 
             
             showTimeline();
-
+            document.getElementById("timeline_btn").style.opacity=0;
         
         });
               
