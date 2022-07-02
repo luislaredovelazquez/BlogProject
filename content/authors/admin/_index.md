@@ -16,9 +16,9 @@ interests:
 - Data Science
 - UX
 organizations:
-- name: Atalait
-  url: https://www.atalait.com/ 
-role: Jr Research Specialist
+- name: OpenText
+  url: https://www.opentext.com/ 
+role: Software Engineer
 social:
 - icon: envelope
   icon_pack: fas
