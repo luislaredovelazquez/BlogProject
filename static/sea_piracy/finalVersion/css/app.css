@@ -36,3 +36,35 @@
 .appbar{
    background-color: aliceblue;
 }
+
+.card_container{
+  display:flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center
+}
+
+.title_container{
+  height: 50px;
+  width: 100%;
+  background-color: #2E3B55;
+  font-family: 'Sail', cursive;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 20px;
+}
+
+.body_container{
+  height: 200px;
+  width: 100%;
+  font-family: 'Gentium Book Plus', serif;
+  color: #726C6C;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.body_container b{
+  color:orange;
+}

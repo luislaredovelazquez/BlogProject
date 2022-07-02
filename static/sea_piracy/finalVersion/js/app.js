@@ -120,10 +120,26 @@ function App() {
         <div>
             <Navbar></Navbar>
           <iframe src="map.html" height="800" width="1000" title="Maritime Attacks Map" frameBorder="0"></iframe>
+          <div className="card_container">
+          <div className="title_container">How close to a country shore were these attacks?</div>
+          <div className="body_container">
+          <b>From 1993 to 2020</b> have been more than <b>7,500 maritime pirate attacks</b> all over the world. This problem has disrupted
+          the supply chain of many companies and governments who rely of the goods that ships carry to sustain critical areas
+          like food, healthcare or the retail industry. In the visualizations below we can realize that <b>most of these attacks
+          happen close to the shores.</b> As we can see, the chart on the left shows where the attack happen and the visualization 
+          on the right describes the latitude and longitude of the closest shore to that particular event.
+          </div> 
+          </div>
           <iframe src="result.html" height="400" width="1000" title="Country indicators" frameBorder="0"></iframe>
-         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Live webcam
-        </Typography>      
+          <div className="card_container">
+          <div className="title_container">Which measures are taking the countries to prevent these attacks?</div>
+          <div className="body_container">
+          As a <b>strong response</b> to these illegal activities, governments and companies have had to take important measures to 
+          prevent further attacks. In some cases, companies have had to <b>redirect their ships or navigate through different routes.</b> 
+          The visualization above shows a heatmap where the most frequent attacks have happened. Also, on the right, we can 
+          visualize a live webcam close to a shore to alert the authorities in case an incident is detected.  
+          </div> 
+          </div>    
         
         <div className="box">
         <iframe src="heatmap.html" height="480" width="480" title="Heatmap" frameBorder="0"></iframe>
@@ -132,7 +148,16 @@ function App() {
         <iframe className="videoFrame" src={webcam_url} height="100%" width="100%" title="Webcam" frameBorder="0"></iframe>
         </div>
         </div>
-
+        <br></br>
+        <div className="card_container">
+          <div className="title_container">Is there a correlation between the homicide rate, population and attack occurence?</div>
+          <div className="body_container">
+          One important fact that I found analyzing this information is that <b>most of the attacks happen close to poor countries</b>, 
+          where probably their security and safety measures are not as developed as in other nations. The bar chart below shows a
+          visualization with the <b>homicide rate</b> by each country and the table also shows its population. This data can work together 
+          with the charts above to analyize if there is a correlation between the homicide rate of each nation and its maritime attack rate.
+          </div> 
+          </div>
         <iframe src="result2.html" height="900" width="1000" title="Country indicators" frameBorder="0"></iframe>
         <DashboardCard></DashboardCard>
         <Floating></Floating>
